@@ -1,0 +1,5 @@
+mvn install:install-file -Dfile=src/main/lib/ngdbc.jar -DgroupId=com.sap.db.jdbc -DartifactId=ngdbc -Dversion=2.20.17 -Dpackaging=jar 
+
+mvn deploy:deploy-file -Durl=file://repo -Dfile=repo/ngdbc.jar -DgroupId=com.sap.db.jdbc -DartifactId=ngdbc -Dpackaging=jar -Dversion=2.20.17
+
+mvn clean install && cf push
